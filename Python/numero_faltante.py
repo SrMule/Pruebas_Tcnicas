@@ -1,6 +1,7 @@
 """
 A partir de un arreglo con números enteros en cualquier orden
-Crear una función que reciba el arreglo y determine el mínimo numero faltante en una sucesión de números enteros
+Crear una función que reciba el arreglo y determine el mínimo numero faltante en una sucesión creciente de números enteros
+El número agregado no puede ser más pequeño que el número más pequeño del arreglo original
 """
 
 def mmn(lista):
