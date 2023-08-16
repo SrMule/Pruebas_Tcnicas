@@ -1,3 +1,8 @@
+"""
+A partir de un arreglo con números enteros en cualquier orden
+Crear una función que reciba el arreglo y determine el mínimo numero faltante en una sucesión de números enteros
+"""
+
 def mmn(lista):
     if len(lista) == 1:
         return lista[0]
