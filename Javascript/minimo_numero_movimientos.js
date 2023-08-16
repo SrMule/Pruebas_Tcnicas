@@ -1,3 +1,10 @@
+/* 
+A partir de un arreglo con números enteros en cualquier orden
+Se considera un movimiento como mover un elemento del arreglo a cualquier otra posición dentro del mismo arreglo
+Crear una función recursiva que determine la minima cantidad de movimientos necesarios para ordenar el arreglo de manera ascendente
+*/
+
+//Implementar mejoras
 function min_movFB(arreglo, inicio, subsec, max_len) {
     if (arreglo.length - subsec.length === 0) {
         return 0;
