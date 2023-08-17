@@ -1,7 +1,8 @@
 """
-A partir de un arreglo con números enteros en cualquier orden
-Crear una función que reciba el arreglo y determine el mínimo número faltante en una sucesión creciente de números enteros
-El número agregado no puede ser más pequeño que el número más pequeño del arreglo original
+A partir de una lista con números enteros en cualquier orden
+Crear una función que reciba una lista y determine el mínimo número faltante en una sucesión creciente de números enteros
+El número agregado no puede ser más pequeño que el número más pequeño de la lista original
+La lista original tendrá al menos 1 número
 """
 
 def mmn(lista):
@@ -41,9 +42,9 @@ def mmn4(lista):
             return i
     return min(lista_set) - 1
 
-print(mmn4([4,1,2,5,6]))
-print(mmn4([4,1,2,5,6]))
-print(mmn4([1,2]))
-print(mmn4([1,2,3,4,5,6]))
-print(mmn4([5]))
-print(mmn4([5,7,9,2,5,4,3,1,2,89]))
+print(mmn4([4,1,2,5,6]))# 3
+print(mmn4([4,1,2,5,6]))# 3
+print(mmn4([1,2]))# 3
+print(mmn4([1,2,3,4,5,6]))# 7
+print(mmn4([5]))# 6
+print(mmn4([5,7,9,2,5,4,3,1,2,89]))# 6
