@@ -25,4 +25,4 @@ console.log(minNumFaltante([4,1,2,5,6]));// 3
 console.log(minNumFaltante([1,2]));// 3
 console.log(minNumFaltante([1,2,3,4,5,6]));// 7
 console.log(minNumFaltante([5]));// 6
-console.log(minNumFaltante([5,7,9,2,5,4,3,1,2,89]));// 6 
+console.log(minNumFaltante([5,7,9,2,5,4,3,1,2,89]));// 6
