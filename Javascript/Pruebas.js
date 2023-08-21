@@ -113,3 +113,35 @@ console.log(order("is2 Thi1s T4est 3a"));
 console.log(order("4of Fo1r pe6ople g3ood th5e the2"));
 console.log(order(" "));
 */
+
+/*
+ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher.
+Create a function that takes a string and returns the string ciphered with Rot13.
+If there are numbers or special characters included in the string, they should be returned as they are.
+Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
+
+function rot13(message){
+    var lowmessage = message.toLowerCase();
+    const abc = "abcdefghijklmnopqrstuvwxyz";
+    message = message.split("");
+    for (let i = 0; i < lowmessage.length; i++) {
+        if (/^[A-Za-z]+$/.test(lowmessage[i])) {
+            let newchar = abc.indexOf(lowmessage[i]) + 13;
+            if (newchar >= abc.length) {
+                newchar = newchar - abc.length;
+            };
+            if (message[i] == lowmessage[i]) {
+                message[i] = abc[newchar];
+            } else {
+                message[i] = abc[newchar].toUpperCase();
+            };
+        };
+    };
+    return message.join("");
+};
+
+console.log(rot13("Test")); //Grfg
+*/
+
+
+
