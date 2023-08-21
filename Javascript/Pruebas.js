@@ -241,4 +241,120 @@ console.log(printerError("aaaxbbbbyyhwawiwjjjwwm")); // 8/22
 
 */
 
+/* 
+EsPrimo
 
+function EsPrimo(num) {
+    if (num == 0) {
+        return false;
+    } else {
+        if (num < 0) {
+            num = -num;
+        };
+        const limite = Math.sqrt(num);
+        for (let i = 2; i <= limite; i++) {
+            if (num % i == 0) {
+                return false;
+            };
+        };
+        return true;
+    };
+};
+
+console.log(EsPrimo(17));
+console.log(EsPrimo(-17));
+console.log(EsPrimo(4));
+console.log(EsPrimo(0));
+// revisar esto
+// const arreglo = Array.from({ length: num }, (_, index) => index + 1);
+// Revisar bien el uso del set
+*/
+
+
+/* 
+Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+    HH = hours, padded to 2 digits, range: 00 - 99
+    MM = minutes, padded to 2 digits, range: 00 - 59
+    SS = seconds, padded to 2 digits, range: 00 - 59
+The maximum time never exceeds 359999 (99:59:59)
+
+
+function humanReadable (seconds) {
+    let SS = seconds % 60;
+    SS = ("0" + SS).slice(-2);
+    let MM = Math.floor(seconds / 60) % 60;
+    MM = ("0" + MM).slice(-2);
+    let HH = Math.floor(Math.floor(seconds / 60) / 60);
+    HH = ("0" + HH).slice(-2);
+    return `${HH}:${MM}:${SS}`;
+};
+
+function humanReadable(seconds) {
+    return [(seconds / 3600) | 0, seconds % 3600 / 60, seconds % 3600 % 60].map(n => ('0' + ( '' + n|0)).substr(-2)).join(':')
+};
+
+function humanReadable(seconds) {
+    const oneMinute = 60
+    const oneHour = oneMinute * 60
+    const H = ('0' + Math.floor(seconds / oneHour)).slice(-2)
+    const M = ('0' + Math.floor(seconds / oneMinute) % 60).slice(-2)
+    const S = ('0' + seconds % 60).slice(-2)
+    return `${H}:${M}:${S}`
+};
+
+console.log(humanReadable(90)); // 00:01:30
+console.log(humanReadable(86400)); //24:00:00
+console.log(humanReadable(359999)); //99:59:59
+*/
+
+/*
+You are given an array (which will have a length of at least 3, but could be very large) containing integers.
+The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N.
+Write a method that takes the array as an argument and returns this "outlier" N.
+
+[2, 4, 0, 100, 4, 11, 2602, 36]
+Should return: 11 (the only odd number)
+
+[160, 3, 1719, 19, 11, 13, -21]
+Should return: 160 (the only even number)
+
+
+function findOutlier(integers){
+    var par = integers.filter(num => num % 2 == 0);
+    if (par.length == 1) {
+        return par[0];
+    }
+    return integers.filter(num => num % 2 != 0)[0];
+};
+
+// Más eficiente
+function findOutlier(integers) {
+    let evenCount = 0;
+    let oddCount = 0;
+    let lastEven = 0;
+    let lastOdd = 0;
+  
+    for (let i = 0; i < integers.length; i++) {
+      if (integers[i] % 2 === 0) {
+        evenCount++;
+        lastEven = integers[i];
+      } else {
+        oddCount++;
+        lastOdd = integers[i];
+      }
+  
+      if (evenCount > 1 && oddCount === 1) {
+        return lastOdd;
+      } else if (oddCount > 1 && evenCount === 1) {
+        return lastEven;
+      }
+    }
+  }
+  
+  const numbers = [2, 4, 7, 8, 10];
+  const outlier = findOutlier(numbers);
+  console.log(outlier);  // El resultado será el elemento atípico (7)
+
+console.log(findOutlier([2, 4, 0, 100, 4, 11, 2602, 36]));
+console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]));
+*/
