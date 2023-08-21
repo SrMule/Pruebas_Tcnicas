@@ -141,7 +141,23 @@ function rot13(message){
 };
 
 console.log(rot13("Test")); //Grfg
+
+
+function alphabetPosition(text) {
+    text = text.toLowerCase().split("");
+    newarr = [];
+    const abc = "abcdefghijklmnopqrstuvwxyz";
+    for (let i = 0; i < text.length; i++) {
+        if (/^[A-Za-z]+$/.test(text[i])) {
+            newarr.push((abc.indexOf(text[i]) + 1).toString());
+        };
+    };
+    return text = newarr.join(" ");
+};
+
+console.log(alphabetPosition("aBc d.")); // 1 2 3 4
+console.log(alphabetPosition("iom<:{b@")); // 9 15 13 2
+console.log(alphabetPosition("22b%6>?j")); // 2 10
+console.log(alphabetPosition("70*o#r:}")); // 15 18
 */
-
-
 
