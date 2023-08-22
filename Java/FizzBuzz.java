@@ -1,3 +1,9 @@
+/*
+Escribir un programa que imprima los números del 1 al 100.
+Pero, para los múltiplos de 3, debes imprimir "Fizz" en lugar del número,
+y para los múltiplos de 5, imprimir "Buzz". Para los números que son múltiplos de ambos, imprimir "FizzBuzz".
+*/
+
 public class FizzBuzz {
     public static void main(String[] args) {
         for (int i = 1; i < 101; i++) {
